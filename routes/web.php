@@ -65,7 +65,7 @@ Route::get('/group-test/{id}', function(Request $request, $id){
 
 });
 
-
+Route::get('/bufferdata','HomeController@show')->name('show.bufferdate');
 
 
 

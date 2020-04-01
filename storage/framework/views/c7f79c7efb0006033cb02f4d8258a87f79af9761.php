@@ -36,35 +36,15 @@
                 <?php if (! (session()->has('buffer_token'))): ?>
                     <div class="panel panel-default">
                         <div class="panel-body notconnected">
-                            <div class="tableSection">
-                                <table class="table">
-                                    <thead>
-                                        <tr>
-                                            <th>Group Name</th>
-                                            <th>Group Type</th>
-                                            <th>Account Name</th>
-                                            <th>Post Text</th>
-                                            <th>Time</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
+                            <div class="alert text-center" role="alert">
+                                <!--<h4>Please connect your Buffer Account</h4>
+                                <p>When you click the button below, you'll grant access to Bulkly to add social media updates on your behalf.</p> -->
 
-                                         
-                                            <tr>
-                                                <td>Dome Group Nam</td>
-                                                <td>Dome Group Name</td>
-                                                <td>
-                                                    <img class="rounded-circle" width="50px" height="50px" src="<?php echo e(asset('images/avatar.png')); ?>" alt="">
-                                                </td>
-                                                <td>Dome Group Name</td>
-                                                <td>Dome Group Name</td>
-                                            </tr>
-                                       
-                                            
-                                    </tbody>
-                                    
-
-                                </table>
+                                <h4>Ready to get started? <br> Simply connect Bulkly with your Buffer account</h4>
+                                <br><br>
+                                <p><a class="btn btn-default width-btn btn-dc"
+                                      href="https://bufferapp.com/oauth2/authorize?client_id=<?php echo e(env('BUFFER_CLIENT_ID')); ?>&redirect_uri=<?php echo e(env('BUFFER_REDIRECT')); ?>&response_type=code">Connect
+                                        Your Buffer account</a></p>
                             </div>
                         </div>
                         

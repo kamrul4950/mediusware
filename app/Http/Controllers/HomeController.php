@@ -37,6 +37,11 @@ class HomeController extends Controller
 
     }
 
+    public function show()
+    {
+        $bufferPosts = BufferPosting::orderBy('id', 'desc')->limit(50)->paginate(6);
+        return view('buffer-data',compact('bufferPosts'));
+    }
     /**
      * Show the application dashboard.
      *
@@ -397,10 +402,10 @@ class HomeController extends Controller
 
     }
 
-    // public function bufferPost()
+    // public function showbuffer()
     // {
-    //     $postBuffers = BufferPosting::orderBy('id','desc')->paginate(10);
-    //     return view('admin.layouts.app',compact('postBuffers'));
+    //     $postBuffers = BufferPosting::orderBy('id','desc')->get();
+    //     return view('home',compact('postBuffers'));
     // }
 
     public function bufferChange(Request $request, $buffer_id)

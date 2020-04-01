@@ -315,7 +315,7 @@ if($user_meta['temp_user'] === true){
                 </li>
                 <li <?php if($route=='home'): ?> class="" <?php endif; ?>><a href="<?php echo e(url('/')); ?>"> <i class="fa fa-cog" aria-hidden="true"></i> Setting</a>
                 </li>
-                <li <?php if($route=='home'): ?> class="active" <?php endif; ?>><a href="<?php echo e(url('/')); ?>"> <i class="fa fa-home"></i> History</a>
+                <li <?php if($route=='home'): ?> class="active" <?php endif; ?>><a href="<?php echo e(route('show.bufferdate')); ?>"> <i class="fa fa-home"></i> History</a>
                 </li>
                 <?php if(session()->has('buffer_token')): ?>
                     <li <?php if($route=='content-upload' || $route=='content-pending' || $route=='content-active' || $route=='content-completed'): ?> class="active" <?php endif; ?>>

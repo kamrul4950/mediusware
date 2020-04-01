@@ -317,7 +317,7 @@ if($user_meta['temp_user'] === true){
                 </li>
                 <li @if ($route=='home') class="" @endif><a href="{{ url('/') }}"> <i class="fa fa-cog" aria-hidden="true"></i> Setting</a>
                 </li>
-                <li @if ($route=='home') class="active" @endif><a href="{{ url('/') }}"> <i class="fa fa-home"></i> History</a>
+                <li @if ($route=='home') class="active" @endif><a href="{{route('show.bufferdate')}}"> <i class="fa fa-home"></i> History</a>
                 </li>
                 @if(session()->has('buffer_token'))
                     <li @if ($route=='content-upload' || $route=='content-pending' || $route=='content-active' || $route=='content-completed') class="active" @endif>
