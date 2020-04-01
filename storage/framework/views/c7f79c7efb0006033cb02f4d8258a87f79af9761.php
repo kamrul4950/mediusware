@@ -49,7 +49,7 @@
                                     </thead>
                                     <tbody>
 
-                                         <?php $__currentLoopData = $activities; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $key => $activitie): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                         
                                             <tr>
                                                 <td>Dome Group Nam</td>
                                                 <td>Dome Group Name</td>
@@ -59,7 +59,7 @@
                                                 <td>Dome Group Name</td>
                                                 <td>Dome Group Name</td>
                                             </tr>
-                                       <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                                       
                                             
                                     </tbody>
                                     

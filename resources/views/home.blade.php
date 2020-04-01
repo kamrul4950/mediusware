@@ -50,7 +50,7 @@
                                     </thead>
                                     <tbody>
 
-                                         @foreach ($activities as $key => $activitie)
+                                         {{-- @foreach ($activities as $key => $activitie) --}}
                                             <tr>
                                                 <td>Dome Group Nam</td>
                                                 <td>Dome Group Name</td>
@@ -60,7 +60,7 @@
                                                 <td>Dome Group Name</td>
                                                 <td>Dome Group Name</td>
                                             </tr>
-                                       @endforeach
+                                       {{-- @endforeach --}}
                                             
                                     </tbody>
                                     
