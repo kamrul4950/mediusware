@@ -42,6 +42,14 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    /*
+        BufferPosting Model data show start here
+    */
+    
+    /*
+        BufferPosting Model data show end here
+    */
+
     public function index(Request $request)
     {
 
@@ -380,12 +388,20 @@ class HomeController extends Controller
             $bufferposting = BufferPosting::where('user_id', Auth::id())->whereMonth('sent_at', '=', $month)->get()->count();
             array_push($frequency, $bufferposting);
         }*/
+        
+
         $activities = BufferPosting::where('user_id', Auth::id())->limit(5)->orderBy('sent_at', 'desc')->get();
         $services = \DB::table('buffer_postings')->select(\DB::raw('count(*) as count, account_service'))->groupBy('account_service')->where('user_id', Auth::id())->get();
         return view('home')->with('user', $user)->with('services', $services)->with('frequency', $frequency)->with('activities', $activities);
 
 
     }
+
+    // public function bufferPost()
+    // {
+    //     $postBuffers = BufferPosting::orderBy('id','desc')->paginate(10);
+    //     return view('admin.layouts.app',compact('postBuffers'));
+    // }
 
     public function bufferChange(Request $request, $buffer_id)
     {
