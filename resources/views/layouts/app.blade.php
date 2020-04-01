@@ -299,7 +299,25 @@ if($user_meta['temp_user'] === true){
                 @if( \Auth::user()->email == env('SU'))
                     <li><a href="{{ url('/admin') }}"> <i class="fa fa-user"></i>Admin</a></li>
                 @endif
-                <li @if ($route=='home') class="active" @endif><a href="{{ url('/') }}"> <i class="fa fa-home"></i> Home</a>
+                <li @if ($route=='home') class="" @endif><a href="{{ url('/') }}"> <i class="fa fa-user" aria-hidden="true"></i> Admin</a>
+                </li>
+                <li @if ($route=='home') class="" @endif><a href="{{ url('/') }}"> <i class="fa fa-home"></i> Home</a>
+                </li>
+                <li @if ($route=='home') class="" @endif><a href="{{ url('/') }}"> <i class="fa fa-upload" aria-hidden="true"></i> Content Upload</a>
+                </li>
+                <li @if ($route=='home') class="" @endif><a href="{{ url('/') }}"> <i class="fa fa-file-text-o" aria-hidden="true"></i> Content Curation</a>
+                </li>
+                <li @if ($route=='home') class="" @endif><a href="{{ url('/') }}"> <i class="fa fa-rss" aria-hidden="true"></i> RSS Automation</a>
+                </li>
+                <li @if ($route=='home') class="" @endif><a href="{{ url('/') }}"> <i class="fa fa-line-chart" aria-hidden="true"></i> Analytics</a>
+                </li>
+                <li @if ($route=='home') class="" @endif><a href="{{ url('/') }}"> <i class="fa fa-calendar" aria-hidden="true"></i> Calender</a>
+                </li>
+                <li @if ($route=='home') class="" @endif><a href="{{ url('/') }}"> <i class="fa fa-user" aria-hidden="true"></i> Social Account</a>
+                </li>
+                <li @if ($route=='home') class="" @endif><a href="{{ url('/') }}"> <i class="fa fa-cog" aria-hidden="true"></i> Setting</a>
+                </li>
+                <li @if ($route=='home') class="active" @endif><a href="{{ url('/') }}"> <i class="fa fa-home"></i> History</a>
                 </li>
                 @if(session()->has('buffer_token'))
                     <li @if ($route=='content-upload' || $route=='content-pending' || $route=='content-active' || $route=='content-completed') class="active" @endif>

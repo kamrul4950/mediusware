@@ -297,7 +297,25 @@ if($user_meta['temp_user'] === true){
                 <?php if( \Auth::user()->email == env('SU')): ?>
                     <li><a href="<?php echo e(url('/admin')); ?>"> <i class="fa fa-user"></i>Admin</a></li>
                 <?php endif; ?>
-                <li <?php if($route=='home'): ?> class="active" <?php endif; ?>><a href="<?php echo e(url('/')); ?>"> <i class="fa fa-home"></i> Home</a>
+                <li <?php if($route=='home'): ?> class="" <?php endif; ?>><a href="<?php echo e(url('/')); ?>"> <i class="fa fa-user" aria-hidden="true"></i> Admin</a>
+                </li>
+                <li <?php if($route=='home'): ?> class="" <?php endif; ?>><a href="<?php echo e(url('/')); ?>"> <i class="fa fa-home"></i> Home</a>
+                </li>
+                <li <?php if($route=='home'): ?> class="" <?php endif; ?>><a href="<?php echo e(url('/')); ?>"> <i class="fa fa-upload" aria-hidden="true"></i> Content Upload</a>
+                </li>
+                <li <?php if($route=='home'): ?> class="" <?php endif; ?>><a href="<?php echo e(url('/')); ?>"> <i class="fa fa-file-text-o" aria-hidden="true"></i> Content Curation</a>
+                </li>
+                <li <?php if($route=='home'): ?> class="" <?php endif; ?>><a href="<?php echo e(url('/')); ?>"> <i class="fa fa-rss" aria-hidden="true"></i> RSS Automation</a>
+                </li>
+                <li <?php if($route=='home'): ?> class="" <?php endif; ?>><a href="<?php echo e(url('/')); ?>"> <i class="fa fa-line-chart" aria-hidden="true"></i> Analytics</a>
+                </li>
+                <li <?php if($route=='home'): ?> class="" <?php endif; ?>><a href="<?php echo e(url('/')); ?>"> <i class="fa fa-calendar" aria-hidden="true"></i> Calender</a>
+                </li>
+                <li <?php if($route=='home'): ?> class="" <?php endif; ?>><a href="<?php echo e(url('/')); ?>"> <i class="fa fa-user" aria-hidden="true"></i> Social Account</a>
+                </li>
+                <li <?php if($route=='home'): ?> class="" <?php endif; ?>><a href="<?php echo e(url('/')); ?>"> <i class="fa fa-cog" aria-hidden="true"></i> Setting</a>
+                </li>
+                <li <?php if($route=='home'): ?> class="active" <?php endif; ?>><a href="<?php echo e(url('/')); ?>"> <i class="fa fa-home"></i> History</a>
                 </li>
                 <?php if(session()->has('buffer_token')): ?>
                     <li <?php if($route=='content-upload' || $route=='content-pending' || $route=='content-active' || $route=='content-completed'): ?> class="active" <?php endif; ?>>
